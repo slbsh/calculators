@@ -1,0 +1,39 @@
+#!/usr/bin/env -S sharc miri
+// lol as if shard was real
+
+loop {
+	let elems = io::readline(io::stdin)->unwrap()->str::split(" ");
+	let res = loop |mut stack = vec::new(), elems = elems| {
+		let e = match elems->iter::curr() {
+			'none if stack.len == 1 => break (ok: stack[0]),
+			'none => break (err: "Invalid Input"),
+		};
+
+		match str::parse(i64, e) {
+			(ok: n) => continue (stack + n, elems->iter::rest())
+		};
+
+		let a = match stack->vec::pop() { 
+			'none => break (err: "Wrong Argument Count") 
+		};
+
+		let b = match stack->vec::pop() { 
+			'none => break (err: "Wrong Argument Count") 
+		};
+
+		let stack = stack + match e {
+			"+" => a + b,
+			"-" => a - b,
+			"*" => a * b,
+			"/" => a / b,
+			_   => break (err: "Invalid Token"),
+		};
+
+		(stack, elems->iter::rest())
+	};
+
+	match res {
+		(ok: n)  => io::println(n),
+		(err: e) => io::println(e),
+	}
+}
