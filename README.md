@@ -41,7 +41,6 @@ An assortment of reverse polish notation calculators in different languages
 - JavaScript
 - TypeScript
 - Perl
-- Powershell
 - Lean
 - C#
 - x86 ASM
