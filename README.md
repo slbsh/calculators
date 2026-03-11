@@ -18,8 +18,9 @@ An assortment of reverse polish notation calculators in different languages
 - Invalid input must not terminate execution
 
 **Formatting**
-- Must be a single file behinning with a shebang which runs the program
+- Must be a single file beginning with a shebang which runs the program
 - Use hard tabs for indentation
+- File must have the executable bit set
 - The smaller and the more optimized the solution the better :)
 
 ## Test Cases:
@@ -33,7 +34,6 @@ An assortment of reverse polish notation calculators in different languages
 ```
 
 ## TODO:
-- C
 - C++
 - Clojure
 - F#
@@ -41,7 +41,6 @@ An assortment of reverse polish notation calculators in different languages
 - JavaScript
 - TypeScript
 - Perl
-- Lean
 - C#
 - x86 ASM
 - Raku
@@ -50,6 +49,27 @@ An assortment of reverse polish notation calculators in different languages
 - Zig
 - Go
 - Hare
+- Dart
+- BQN
+- APL
+- Uiua
+- Ocaml
+- ReasonML
 - Haskell
 - QBE IR
 - LLVM IR
+- Holy C
+- D
+- C--
+- Julia
+- Janet
+- Lua
+- BASIC
+- Elm
+- Ruby
+- Elixir
+- Erlang
+- Groovy
+- Scala
+- Kotlin
+- Gleam
