@@ -53,7 +53,6 @@ An assortment of reverse polish notation calculators in different languages
 - Uiua
 - Ocaml
 - ReasonML
-- Haskell
 - QBE IR
 - LLVM IR
 - Holy C
