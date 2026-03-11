@@ -37,7 +37,6 @@ An assortment of reverse polish notation calculators in different languages
 - Clojure
 - F#
 - Grain
-- JavaScript
 - TypeScript
 - Perl
 - C#
