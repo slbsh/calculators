@@ -22,8 +22,8 @@ public class calc {
 					break;
 				}
 
-				var a = stack.remove(stack.size() - 1);
 				var b = stack.remove(stack.size() - 1);
+				var a = stack.remove(stack.size() - 1);
 				
 				switch (e) {
 					case "+" -> stack.add(a + b);

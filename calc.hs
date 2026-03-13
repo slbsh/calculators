@@ -32,6 +32,6 @@ main = do
     else do
       line <- getLine
       case eval line of
-        Left e -> print e
+        Left e -> putStrLn e
         Right x -> print x
       main
