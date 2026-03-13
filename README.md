@@ -38,7 +38,6 @@ An assortment of reverse polish notation calculators in different languages
 - Grain
 - TypeScript
 - Perl
-- C#
 - x86 ASM
 - Raku
 - Odin
