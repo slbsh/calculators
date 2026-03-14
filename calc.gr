@@ -1,0 +1,61 @@
+#!/usr/bin/env -S grain
+
+module Calc
+from "string" include String
+from "array" include Array
+from "stack" include Stack
+from "number" include Number
+from "result" include Result
+from "option" include Option
+
+from "buffer" include Buffer
+from "wasi/file" include File
+from "wasi/process" include Process
+
+let calc = (toks) => {
+	let mut stack = Stack.make();
+
+	for (let mut i = 0; i < Array.length(toks); i += 1) {
+		match (Number.parse(toks[i])) {
+			Ok(n)  => Stack.push(n, stack),
+			Err(_) => {
+				if (Stack.size(stack) < 2) {
+					return Err("Too Few Arguments");
+				}
+
+				let b = Option.unwrap(Stack.pop(stack));
+				let a = Option.unwrap(Stack.pop(stack));
+
+				Stack.push(match (toks[i]) {
+					"+" => a + b,
+					"-" => a - b,
+					"*" => a * b,
+					"/" => a / b,
+					_   => return Err("Invalid Token"),
+				}, stack);
+			},
+		}
+	}
+
+	match (Stack.size(stack)) {
+		1 => return Ok(Option.unwrap(Stack.pop(stack))),
+		_ => return Err("Invalid Input"),
+	}
+}
+
+while (true) {
+	let buf = Buffer.make(128)
+	while (true) {
+		match (File.fdRead(File.stdin, 1)) {
+			Ok((b"\n", _)) => break,
+			Ok((bytes, _)) => Buffer.addBytes(bytes, buf),
+			Err(_) => void,
+		}
+		Result.unwrap(Process.schedYield())
+	}
+
+	match (calc(String.split(" ", String.trim(Buffer.toString(buf))))) {
+		Ok(n)  => print(n),
+		Err(e) => print(e),
+	}
+}
