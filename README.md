@@ -56,7 +56,6 @@ An assortment of reverse polish notation calculators in different languages
 - C--
 - Julia
 - Janet
-- Lua
 - BASIC
 - Elm
 - Ruby
