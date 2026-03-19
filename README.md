@@ -9,7 +9,7 @@ An assortment of reverse polish notation calculators in different languages
 - Division should be truncating
 - Must exit after recieving a CTRL-C interrupt
 
-**Errors:**
+**Errors**
 - Receiving an invalid token must print "Invalid Token"
 - Receiving incorrect number of tokens must print "Too Few Arguments"
 - Recieving any other invalid input must print "Invalid Input"
@@ -24,7 +24,7 @@ An assortment of reverse polish notation calculators in different languages
 - The smaller and the more optimized the solution the better :)
 - Solution should be as language idiomatic as possible
 
-## Test Cases:
+## Test Cases
 ```rs
 1 2 + // 3
 10 10 * 5 * // 500
@@ -34,31 +34,56 @@ An assortment of reverse polish notation calculators in different languages
 -1 2 3 4 5 -6 + + + + + // 7
 ```
 
-## TODO:
-- F#
-- TypeScript
-- x86 ASM
-- BQN
-- APL
-- Uiua
-- ReasonML
-- QBE IR
-- LLVM IR
-- Holy C
-- C--
-- Julia
-- Janet
-- BASIC
-- Elm
-- Ruby
-- Elixir
-- Erlang
-- Groovy
-- Scala
-- Kotlin
-- Gleam
-- Pascal
-- PHP
-- WAT
-- MoonBit
-- Prolog
+## Languages
+- [ ] F#
+- [ ] TypeScript
+- [ ] x86 ASM
+- [ ] Odin
+- [ ] C3
+- [ ] Zig
+- [ ] Go
+- [ ] Hare
+- [ ] Dart
+- [ ] BQN
+- [ ] APL
+- [ ] Uiua
+- [ ] OCaml
+- [ ] ReasonML
+- [ ] QBE IR
+- [ ] LLVM IR
+- [ ] Holy C
+- [ ] D
+- [ ] C--
+- [ ] Julia
+- [ ] Janet
+- [ ] BASIC
+- [ ] Elm
+- [ ] Ruby
+- [ ] Elixir
+- [ ] Erlang
+- [ ] Groovy
+- [ ] Scala
+- [ ] Kotlin
+- [ ] Gleam
+- [ ] Pascal
+- [ ] PHP
+- [ ] WAT
+- [x] Awk
+- [x] Bash
+- [x] C
+- [x] Clojure
+- [x] C++
+- [x] C#
+- [x] GNU R
+- [x] Haskell
+- [x] Java
+- [x] JavaScript
+- [x] Lean
+- [x] Lua
+- [x] Perl
+- [x] PowerShell
+- [x] Python
+- [x] Raku
+- [x] Racket
+- [x] Rust
+- [x] Shard
