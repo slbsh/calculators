@@ -41,7 +41,6 @@ An assortment of reverse polish notation calculators in different languages
 - BQN
 - APL
 - Uiua
-- Ocaml
 - ReasonML
 - QBE IR
 - LLVM IR
