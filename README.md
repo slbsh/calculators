@@ -34,56 +34,57 @@ An assortment of reverse polish notation calculators in different languages
 -1 2 3 4 5 -6 + + + + + // 7
 ```
 
-## Languages
-- [ ] F#
-- [ ] TypeScript
-- [ ] x86 ASM
-- [ ] Odin
-- [ ] C3
-- [ ] Zig
-- [ ] Go
-- [ ] Hare
-- [ ] Dart
-- [ ] BQN
+## Languages (alphabetically)
 - [ ] APL
-- [ ] Uiua
-- [ ] OCaml
-- [ ] ReasonML
-- [ ] QBE IR
-- [ ] LLVM IR
-- [ ] Holy C
-- [ ] D
-- [ ] C--
-- [ ] Julia
-- [ ] Janet
-- [ ] BASIC
-- [ ] Elm
-- [ ] Ruby
-- [ ] Elixir
-- [ ] Erlang
-- [ ] Groovy
-- [ ] Scala
-- [ ] Kotlin
-- [ ] Gleam
-- [ ] Pascal
-- [ ] PHP
-- [ ] WAT
 - [x] Awk
+- [ ] BASIC
+- [ ] BQN
 - [x] Bash
 - [x] C
-- [x] Clojure
-- [x] C++
 - [x] C#
-- [x] GNU R
+- [x] C++
+- [ ] C--
+- [x] C3
+- [x] Clojure
+- [x] D
+- [x] Dart
+- [ ] Elixir
+- [ ] Elm
+- [ ] Erlang
+- [ ] F#
+- [ ] Gleam
+- [x] Go
+- [x] Grain
+- [ ] Groovy
+- [x] Hare
 - [x] Haskell
+- [ ] Holy C
+- [ ] Janet
 - [x] Java
 - [x] JavaScript
+- [ ] Julia
+- [ ] Kotlin
+- [ ] LLVM IR
 - [x] Lean
 - [x] Lua
+- [ ] MoonBit
+- [x] OCaml
+- [x] Odin
+- [ ] PHP
+- [ ] Pascal
 - [x] Perl
 - [x] PowerShell
 - [x] Python
-- [x] Raku
+- [ ] QBE IR
 - [x] Racket
+- [x] Raku
+- [ ] ReasonML
+- [ ] Ruby
 - [x] Rust
+- [ ] Scala
 - [x] Shard
+- [ ] TypeScript
+- [ ] Uiua
+- [ ] WAT
+- [x] Zig
+- [ ] x86 ASM
