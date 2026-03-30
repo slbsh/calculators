@@ -86,5 +86,6 @@ An assortment of reverse polish notation calculators in different languages
 - [ ] TypeScript
 - [ ] Uiua
 - [ ] WAT
+- [x] Wren
 - [x] Zig
 - [ ] x86 ASM
