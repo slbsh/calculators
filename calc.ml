@@ -1,39 +1,35 @@
 #!/usr/bin/env ocaml
 
-let op = function
-	| "+" -> Some ( + )
-	| "-" -> Some ( - )
-	| "*" -> Some ( * )
-	| "/" -> Some ( / )
-	| _ -> None
+let parse = function
+  | "+" -> Some (`Op ( + ))
+  | "-" -> Some (`Op ( - ))
+  | "*" -> Some (`Op ( * ))
+  | "/" -> Some (`Op ( / ))
+  | s -> s |> int_of_string_opt |> Option.map (fun n -> `Num n)
 
-let eval line =
-	let step tok st =
-		match op tok with
-		| Some f -> (
-			match st with
-			| a :: b :: st' -> Ok (f b a :: st')
-			| _ -> Error "Too Few Arguments")
-		| None ->
-			Option.(
-				tok
-				|> int_of_string_opt
-				|> map (fun n -> n :: st)
-				|> to_result ~none:"Invalid Token")
-	in
-	line
-	|> String.split_on_char ' '
-	|> List.fold_left (fun st tok -> Result.bind st (step tok)) (Ok [])
-	|> function
-	| Ok [ x ] -> Int.to_string x
-	| Error e -> e
-	| _ -> "Invalid Input"
+let eval item nums =
+  let apply op = function
+    | b :: a :: nums -> Ok (op a b :: nums)
+    | _ -> Error "Too Few Arguments"
+  in
+  match parse item with
+  | Some (`Op op) -> apply op nums
+  | Some (`Num n) -> Ok (n :: nums)
+  | None -> Error "Invalid Token"
+
+let eval nums item = Result.bind nums (eval item)
+
+let run line =
+  match line |> String.split_on_char ' ' |> List.fold_left eval (Ok []) with
+  | Ok [ x ] -> Int.to_string x
+  | Error e -> e
+  | _ -> "Invalid Input"
 
 let read () =
-	match read_line () with
-	| s -> Some (String.trim s)
-	| exception Sys.Break -> None
+  match read_line () with
+  | s -> Some (String.trim s)
+  | exception Sys.Break -> None
 
 let () =
-	Sys.catch_break true;
-	Seq.of_dispenser read |> Seq.map eval |> Seq.iter print_endline
+  Sys.catch_break true;
+  Seq.of_dispenser read |> Seq.map run |> Seq.iter print_endline
