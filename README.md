@@ -3,9 +3,9 @@ An assortment of reverse polish notation calculators in different languages
 ## Rules
 
 **Behaviour**
-- Read input from stdin
+- Read unspecified size input from stdin
 - Write output to stdout after a newline
-- Must handle negative numbers
+- Must handle values from `-2^63` to `2^63-1`
 - Division should be truncating
 - Must exit after recieving a CTRL-C interrupt
 
@@ -38,21 +38,21 @@ An assortment of reverse polish notation calculators in different languages
 - [ ] F#
 - [ ] TypeScript
 - [ ] x86 ASM
-- [ ] Odin
-- [ ] C3
-- [ ] Zig
-- [ ] Go
-- [ ] Hare
-- [ ] Dart
+- [x] Odin
+- [x] C3
+- [x] Zig
+- [x] Go
+- [x] Hare
+- [x] Dart
 - [ ] BQN
 - [ ] APL
 - [ ] Uiua
-- [ ] OCaml
+- [x] OCaml
 - [ ] ReasonML
 - [ ] QBE IR
 - [ ] LLVM IR
 - [ ] Holy C
-- [ ] D
+- [x] D
 - [ ] C--
 - [ ] Julia
 - [ ] Janet
@@ -68,6 +68,7 @@ An assortment of reverse polish notation calculators in different languages
 - [ ] Pascal
 - [ ] PHP
 - [ ] WAT
+- [ ] MoonBit
 - [x] Awk
 - [x] Bash
 - [x] C
