@@ -22,7 +22,6 @@ An assortment of reverse polish notation calculators in different languages
 - Use hard tabs for indentation
 - File must have the executable bit set
 - The smaller and the more optimized the solution the better :)
-- Solution should be as language idiomatic as possible
 
 ## Test Cases
 ```rs
