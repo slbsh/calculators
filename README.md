@@ -50,7 +50,7 @@ An assortment of reverse polish notation calculators in different languages
 - [ ] Elixir
 - [ ] Elm
 - [ ] Erlang
-- [ ] F#
+- [x] F#
 - [ ] Gleam
 - [x] Go
 - [x] Grain
